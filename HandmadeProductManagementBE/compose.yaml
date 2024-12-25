@@ -1,0 +1,18 @@
+﻿version: '3.8'
+
+services:
+  handmadeproductmanagementapi:
+    build:
+      context: .
+      dockerfile: HandmadeProductManagementBE/Dockerfile  
+    ports:
+      - "8082:8080"  
+      - "8083:8081" 
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - handmadeproductnetwork
+
+networks:
+  handmadeproductnetwork:
+    driver: bridge

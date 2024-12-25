@@ -60,12 +60,13 @@
                 HasNextPage = Model.HasNextPage
             };
 }
+</div>
 
 <partial name="~/Pages/Shared/_Pagination.cshtml" model="paginationModel" />
 <div class="mt-8">
 
 
-        <script>
+    <script>
             const apiBaseUrl = '@apiBaseUrl';
 
             async function deleteUser(userId) {
@@ -102,3 +103,4 @@
                 }
             }
         </script>
+</div>
